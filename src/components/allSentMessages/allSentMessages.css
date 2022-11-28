@@ -1,0 +1,61 @@
+*{
+    font-family: sans-serif;
+}
+.allmsgContainer{
+    width: 70%;
+    height: 91.5vh;
+    margin: auto;
+    overflow-y: scroll;
+    border: 1px solid teal;
+}
+.allmsgHeadTextBox{
+    width: 95%;
+    height: 7vh;
+    display: flex;
+    flex-direction: row;
+    padding-left: 5%;
+    gap: 2%;
+    border-bottom: .2vw solid gray;
+}
+.allmsgHeadText{
+    font-size: 1.5vw;
+    font-weight: 700;
+    padding-left: 12px;
+    padding-right: 12px;
+    color: white;
+    background-color: red;
+    border: 1px solid red;
+    border-radius: .3vw;
+}
+.allmsgItemBox{
+    width: fit-content;
+    max-width: 60%;
+    height: fit-content;
+    /* height: 5vh; */
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding-left: 2%;
+    padding-right: 2%;
+    font-size: 1.2vw;
+    font-weight: 600;
+    margin-top: 3vh;
+    margin-left: 5%;
+    border: 1px solid rgb(199, 191, 191);
+    border-radius: .5vw;
+    background-color: rgb(238, 210, 210);
+}
+.textItem{
+    text-align: left;
+}
+.sentTimeBox{
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    /* border: 1px solid red; */
+}
+a{
+    text-decoration: none;
+    color: black;
+}

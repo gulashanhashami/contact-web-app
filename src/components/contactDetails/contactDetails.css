@@ -1,0 +1,55 @@
+*{
+    font-family: sans-serif;
+}
+
+.detailsContainer{
+    width: 70%;
+    height: 91.5vh;
+    margin: auto;
+    border: 1px solid teal;
+}
+.deHeadText{
+        width: 95%;
+        height: 7vh;
+        display: flex;
+        flex-direction: row;
+        padding-left: 5%;
+        gap: 2%;
+        border-bottom: .2vw solid gray;
+    }
+    .detailsHeadText{
+        font-size: 1.5vw;
+    font-weight: 700; 
+    }
+
+    .detailsBox{
+        width: 95%;
+        height: fit-content;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        padding-left: 5%;
+        font-size: 1.2vw;
+        font-weight: 600;
+    }
+    .buttonBox{
+        width: 95%;
+        height: fit-content;
+        margin-top: 5%;
+        /* border: 1px solid red; */
+    }
+    .sendBtn{
+        width: 20%;
+        height: 5vh;
+        font-size: 1.1vw;
+        font-weight: bold;
+        color: white;
+        cursor: pointer;
+        border-radius: .3vw;
+        background-color: green;
+        border: .2vw solid green;
+    }
+    .sendBtn:hover{
+        background-color: white;
+        color: red;
+    }

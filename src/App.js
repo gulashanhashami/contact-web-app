@@ -1,23 +1,32 @@
-import logo from './logo.svg';
-import './App.css';
+import { useState } from "react";
+import { Route, Routes } from "react-router-dom";
+import "./App.css";
+import { AllSentMessages } from "./components/allSentMessages/AllSentMessages";
+import { ContactDetails } from "./components/contactDetails/ContactDetails";
+import { HomePage } from "./components/mainPage/HomePage";
+import { Navbar } from "./components/navbar/Navbar";
+import { NewMessage } from "./components/newMessage/NewMessage";
 
 function App() {
+  const [contactDetailsDtata, setContactDetailsData] = useState({});
+  // console.log("app",contactDetailsDtata)
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <Navbar />
+      <Routes>
+        <Route path="/" element={<HomePage />} />
+        <Route
+          path="/contactData/:id"
+          element={
+            <ContactDetails setContactDetailsData={setContactDetailsData} />
+          }
+        />
+        <Route
+          path="/newmessage"
+          element={<NewMessage contactDetailsDtata={contactDetailsDtata} />}
+        />
+        <Route path="/allsentmessages" element={<AllSentMessages />} />
+      </Routes>
     </div>
   );
 }

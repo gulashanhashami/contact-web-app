@@ -1,0 +1,59 @@
+*{
+    font-family: sans-serif;
+}
+.messageContainer{
+    width: 70%;
+    height: 91.5vh;
+    margin: auto;
+    border: 1px solid teal;
+}
+.messageHeadTextBox{
+    width: 95%;
+    height: 7vh;
+    display: flex;
+    flex-direction: row;
+    padding-left: 5%;
+    gap: 2%;
+    border-bottom: .2vw solid gray;  
+}
+.messagePageHeadText{
+    font-size: 1.5vw;
+    font-weight: 700; 
+}
+.messagereceiverName{
+    margin-top: 5%;
+    width: fit-content;
+    height: 6vh;
+    display: flex;
+    flex-direction: row;
+    margin-left: 5%;
+    border-bottom: .2vw solid gray;
+}
+.messageTextBox{
+    margin-top: 10%;
+    width: 30%;
+    height: 7vh;
+    flex-direction: row;
+    padding-left: 4%;
+    /* border: 1px solid red; */
+}
+.enterText{
+    width: 75.5%;
+    height: 70%;
+    font-size: 1.1vw;
+    outline: none;
+}
+.sendButton{
+    width: 20.5%;
+    height: 78%;
+    font-size: 1.1vw;
+    font-weight: bold;
+    cursor: pointer;
+    color: white;
+    background-color: green;
+    border: .2vw solid green;
+}
+.sendButton:hover{
+    background-color: white;
+    color: red;
+}
