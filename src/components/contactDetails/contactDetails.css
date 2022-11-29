@@ -67,3 +67,11 @@
         width: 4%;
         height: 95%;
     }
+    @media (max-width:415px){
+        .detailsContactProf{
+            height: 55%;
+        }
+        .detailsContainer{
+            width: 90%;
+        }
+    }

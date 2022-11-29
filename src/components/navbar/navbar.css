@@ -18,3 +18,8 @@
     font-weight: 700;
     margin-left: 5%;
 }
+@media (max-width:415px){
+    .nav{
+        width: 90.01%;
+}
+}

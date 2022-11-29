@@ -58,6 +58,14 @@
     width: 12%;
     height: 95%;
 }
+@media (max-width:415px){
+    .allsmsContactProf{
+        height: 50%;
+    }
+    .allmsgContainer{
+        width: 90%;
+    }
+}
 .textItem{
     text-align: left;
 }
