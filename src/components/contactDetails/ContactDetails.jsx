@@ -5,8 +5,7 @@ import "./contactDetails.css";
 export const ContactDetails = ({ setContactDetailsData }) => {
   const [detailsData, setDetailsData] = useState({});
 
-  const id = useParams();
-
+  const _id = useParams();
   //useEffect hook to call the function for componentdidMount
   useEffect(() => {
     getDetails();
@@ -15,10 +14,10 @@ export const ContactDetails = ({ setContactDetailsData }) => {
   // function for get a perticular data from api
   const getDetails = () => {
     axios
-      .get(`http://localhost:3001/contactData/${id.id}`)
+      .get(`https://contactproj.herokuapp.com/contacts/${_id.id}`)
       .then((data) => {
-        setDetailsData(data.data);
-        setContactDetailsData(data.data);
+        setDetailsData(data.data.contacts);
+        setContactDetailsData(data.data.contacts);
       })
       .catch((err) => {
         console.log("err", err);
@@ -33,7 +32,10 @@ export const ContactDetails = ({ setContactDetailsData }) => {
           <p className="detailsHeadText">Contact Details</p>
         </div>
         <div className="detailsBox">
+          <div className="detailsTextProfile">
+          <img id="profile" className="detailsContactProf" src="https://cdn.iconscout.com/icon/free/png-64/profile-5023700-4195416.png" alt="" />
           <p className="detailsText">Name : {detailsData.name}</p>
+          </div>
           <p className="detailsText">
             Phone number : {detailsData.phone_number}
           </p>

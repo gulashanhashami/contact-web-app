@@ -16,12 +16,14 @@ export const NewMessage = ({ contactDetailsDtata }) => {
     });
   };
   //function for send the otp message to a given number
+  // https://contactproj.herokuapp.com/sendotp
   const sendOtpFunction = () => {
-    console.log(textData.textMessage, contactDetailsDtata.phone_number);
     axios
       .post(
-        `http://localhost:4000/sendotp?recipient=${contactDetailsDtata.phone_number}&textMessage=${textData.textMessage}`
-      )
+        `https://contactproj.herokuapp.com/sendotp?recipient=${contactDetailsDtata.phone_number}&textMessage=${textData.textMessage}`
+      ).then((res)=>{
+        alert("OTP has sent successfully");
+      })
       .catch((err) => {
         console.log("err", err);
       });

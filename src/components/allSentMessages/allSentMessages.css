@@ -45,6 +45,19 @@
     border-radius: .5vw;
     background-color: rgb(238, 210, 210);
 }
+.allsmsTextProfile{
+    width: 60%;
+    height: 5vh;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 3%;
+    /* border: 1px solid red; */
+}
+.allsmsContactProf{
+    width: 12%;
+    height: 95%;
+}
 .textItem{
     text-align: left;
 }
@@ -58,4 +71,12 @@
 a{
     text-decoration: none;
     color: black;
+}
+.loadingData{
+    margin: auto;
+    font-size: 1.5vw;
+    font-weight: bold;
+    margin-top: 10vh;
+    color: green;
+    /* border: 1px solid red; */
 }

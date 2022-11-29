@@ -27,18 +27,32 @@
     border-radius: .3vw;
 }
 .itemBox{
-    width: 95%;
+    width: 90%;
     /* height: fit-content; */
     height: 5vh;
     display: flex;
+    margin-top: 2vh;
     flex-direction: row;
     padding-left: 5%;
+    gap: 2%;
+    align-items: center;
     font-size: 1.2vw;
     font-weight: 600;
     /* border: 1px solid gray; */
 }
+.contactProf{
+    width: 4%;
+    height: 95%;
+}
 a{
     text-decoration: none;
     color: black;
+}
+.homeLoadingData{
+    margin: auto;
+    font-size: 1.5vw;
+    font-weight: bold;
+    margin-top: 10vh;
+    color: green;
 }
 

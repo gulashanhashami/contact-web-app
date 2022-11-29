@@ -13,7 +13,7 @@ export const AllSentMessages = () => {
   // function for get the data from api
   const getSentMessageData = () => {
     axios
-      .get("http://localhost:4000/sendotp")
+      .get("https://contactproj.herokuapp.com/sendotp")
       .then((res) => {
         setAllSentMessages(res.data.data);
       })
@@ -34,11 +34,20 @@ export const AllSentMessages = () => {
             <p className="allmsgHeadText">List of message sent</p>
           </Link>
         </div>
+        {(allSentMessages.length===0)? (
+          <div className="loadingData">
+            <h1>Loading...</h1>
+          </div>
+        ): (<div>
+           {/* code for maa the data */}
         {allSentMessages.map((item) => {
           return (
             <div className="allmsgItemBox" key={item.sid}>
               <div className="sentTimeBox">
+                <div className="allsmsTextProfile">
+                <img id="profile" className="allsmsContactProf" src="https://cdn.iconscout.com/icon/free/png-64/profile-5023700-4195416.png" alt="" />
                 <p className="textItem">{item.to}</p>
+                </div>
                 <p>
                   {new Date(item.dateSent).toLocaleString(undefined, {
                     timeZone: "Asia/Kolkata",
@@ -49,6 +58,8 @@ export const AllSentMessages = () => {
             </div>
           );
         })}
+         </div>
+        )}
       </div>
     </>
   );

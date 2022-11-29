@@ -13,7 +13,7 @@ export const HomePage = () => {
   // function for get the data from api
   const getData = () => {
     axios
-      .get("http://localhost:3001/contactData")
+      .get("https://contactproj.herokuapp.com/contacts")
       .then((data) => {
         setContactData(data.data);
       })
@@ -34,15 +34,26 @@ export const HomePage = () => {
             <p className="headText">List of message sent</p>
           </Link>
         </div>
+        {(contactData.length===0)? (
+          <div className="homeLoadingData">
+            <h1>Loading...</h1>
+          </div>
+        ): (<div>
+        {/* code for maa the data */}
         {contactData.map((item) => {
           return (
-            <div className="itemBox" key={item.id}>
-              <Link to={`/contactData/${item.id}`}>
+            <div key={item._id}>
+              <Link to={`/contactData/${item._id}`}>
+                <div className="itemBox">
+              <img id="profile" className="contactProf" src="https://cdn.iconscout.com/icon/free/png-64/profile-5023700-4195416.png" alt="" />  
                 <p>{item.name}</p>
+                </div>
               </Link>
             </div>
           );
         })}
+        </div>
+        )}
       </div>
     </>
   );

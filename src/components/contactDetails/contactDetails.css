@@ -31,6 +31,16 @@
         padding-left: 5%;
         font-size: 1.2vw;
         font-weight: 600;
+        margin-top: 5vh;
+        /* border: 1px solid teal; */
+    }
+    .detailsTextProfile{
+        width: 90%;
+        height: 5vh;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        gap: 2%;
     }
     .buttonBox{
         width: 95%;
@@ -52,4 +62,8 @@
     .sendBtn:hover{
         background-color: white;
         color: red;
+    }
+    .detailsContactProf{
+        width: 4%;
+        height: 95%;
     }
