@@ -16,11 +16,10 @@ export const NewMessage = ({ contactDetailsDtata }) => {
     });
   };
   //function for send the otp message to a given number
-  // https://contactproj.herokuapp.com/sendotp
   const sendOtpFunction = () => {
     axios
       .post(
-        `https://contactproj.herokuapp.com/sendotp?recipient=${contactDetailsDtata.phone_number}&textMessage=${textData.textMessage}`
+        `https://contact-webs.onrender.com/sendotp?recipient=${contactDetailsDtata.phone_number}&textMessage=${textData.textMessage}`
       ).then((res)=>{
         alert("OTP has sent successfully");
       })

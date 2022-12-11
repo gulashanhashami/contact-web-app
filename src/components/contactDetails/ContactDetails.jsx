@@ -14,7 +14,7 @@ export const ContactDetails = ({ setContactDetailsData }) => {
   // function for get a perticular data from api
   const getDetails = () => {
     axios
-      .get(`https://contactproj.herokuapp.com/contacts/${_id.id}`)
+      .get(`https://contact-webs.onrender.com/contacts/${_id.id}`)
       .then((data) => {
         setDetailsData(data.data.contacts);
         setContactDetailsData(data.data.contacts);

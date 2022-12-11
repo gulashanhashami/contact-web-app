@@ -13,7 +13,7 @@ export const AllSentMessages = () => {
   // function for get the data from api
   const getSentMessageData = () => {
     axios
-      .get("https://contactproj.herokuapp.com/sendotp")
+      .get("https://contact-webs.onrender.com/sendotp")
       .then((res) => {
         setAllSentMessages(res.data.data);
       })

@@ -13,7 +13,7 @@ export const HomePage = () => {
   // function for get the data from api
   const getData = () => {
     axios
-      .get("https://contactproj.herokuapp.com/contacts")
+      .get("https://contact-webs.onrender.com/contacts")
       .then((data) => {
         setContactData(data.data);
       })
